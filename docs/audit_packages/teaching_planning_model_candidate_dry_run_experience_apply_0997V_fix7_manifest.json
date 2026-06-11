@@ -1,0 +1,58 @@
+{
+  "stage_code": "0997V_fix7",
+  "stage_id": "0997V_TEACHING_PLANNING_MODEL_CANDIDATE_DRY_RUN_EXPERIENCE_APPLY",
+  "final_status": "MODEL_CANDIDATE_DRY_RUN_SMOKE_PASS",
+  "smoke_marker": "ALL_0997V_TEACHING_PLANNING_MODEL_CANDIDATE_DRY_RUN_SMOKE_OK",
+  "created_for_review_repo": "ROLLcatCLUB/xiaobei-0997lmn-runtime-review",
+  "local_frontend_url": "http://127.0.0.1:5177/frontend/workbench/index.html?teaching_planning_session=tp_session_syn_001&structured_patch=0997T&teaching_planning_model_api_base=http%3A%2F%2F127.0.0.1%3A8083%2Fapi%2Fworkbench&v=0997V_fix7",
+  "local_model_api_base": "http://127.0.0.1:8083/api/workbench",
+  "boundary": {
+    "readonly": true,
+    "database_written": false,
+    "memory_store_written": false,
+    "review_event_written": false,
+    "feishu_write_allowed": false,
+    "formal_export_created": false,
+    "classroom_app_connect_allowed": false,
+    "student_submit_connect_allowed": false,
+    "teacher_review_required": true
+  },
+  "included_local_files": [
+    "docs/audit/teaching_planning_model_candidate_dry_run_experience_apply_0997V_fix7_report.md",
+    "docs/audit_packages/teaching_planning_model_candidate_dry_run_experience_apply_0997V_fix7_manifest.json",
+    "outputs/teaching_planning_frontend_0997V/model_candidate_dry_run_smoke_0997V.json",
+    "outputs/teaching_planning_frontend_0997V/model_candidate_dry_run_smoke_0997V.png",
+    "scripts/smoke_teaching_planning_model_candidate_dry_run_0997V.js",
+    "frontend/workbench/index.html",
+    "frontend/workbench/workbench_semester_schedule_planning_v1.js",
+    "frontend/workbench/workbench_focus_workspace_v1.js",
+    "frontend/workbench/workbench_renderer_protocol_v1.js",
+    "frontend/workbench/workbench_teaching_planning_model_candidate_dry_run_0997V.js",
+    "frontend/workbench/workbench_teaching_planning_agent_action_dry_run_chat_0997P.js",
+    "frontend/workbench/workbench_mock_agent_router_v1.js",
+    "frontend/workbench/workbench_teaching_planning_route_adapter_0997N.js",
+    "frontend/workbench/workbench_teaching_planning_visible_preview_0995L.js",
+    "frontend/workbench/workbench_teaching_planning_system_visuals_0996D.js",
+    "backend/xiaobei_ai/workbench_context_switch.py",
+    "backend/xiaobei_ai/workbench_ai_candidate_guard.py",
+    "backend/xiaobei_ai/workbench_ai_candidate_dry_run.py",
+    "backend/xiaobei_ai/workbench_intent_router.py",
+    "backend/xiaobei_ai/workbench_dry_run.py"
+  ],
+  "review_repo_paths": {
+    "report": "docs/audit/teaching_planning_model_candidate_dry_run_experience_apply_0997V_fix7_report.md",
+    "manifest": "docs/audit_packages/teaching_planning_model_candidate_dry_run_experience_apply_0997V_fix7_manifest.json",
+    "smoke_result": "docs/audit/teaching_planning_model_candidate_dry_run_experience_apply_0997V_fix7_result.json",
+    "smoke_screenshot": "docs/audit/screenshots/model_candidate_dry_run_smoke_0997V_fix7.png",
+    "smoke_script": "scripts/smoke_teaching_planning_model_candidate_dry_run_0997V.js",
+    "source_snapshot_root": "source_snapshots/0997V_fix7/"
+  },
+  "forbidden_files_excluded": [
+    ".env",
+    "secrets",
+    "tokens",
+    "student data",
+    "local database files",
+    "provider raw credentials"
+  ]
+}
