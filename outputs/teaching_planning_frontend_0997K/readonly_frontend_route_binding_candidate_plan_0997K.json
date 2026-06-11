@@ -1,0 +1,70 @@
+{
+  "stage_id": "0997K_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_APPLY",
+  "final_status": "READONLY_ROUTE_BINDING_CANDIDATE_PLAN_READY",
+  "plan_scope": "teaching_planning_frontend_readonly_route_binding_readonly_candidate",
+  "source_chain": {
+    "source_gate": "0997J_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_GATE",
+    "source_backend_readonly_routes": "0997GHI_TEACHING_PLANNING_BACKEND_READONLY_ROUTE_APPLY_SMOKE_SEAL"
+  },
+  "backend_route_count": 7,
+  "candidate_asset_paths": {
+    "runtime_adapter_candidate": "frontend/workbench/workbench_teaching_planning_route_adapter_0997K.js",
+    "runtime_init_candidate": "frontend/workbench/workbench_teaching_planning_route_adapter_0997K.init.js",
+    "runtime_style_candidate": "frontend/workbench/workbench_teaching_planning_route_adapter_0997K.css",
+    "target_surface_candidate": "frontend/workbench/index.html"
+  },
+  "candidate_contracts": [
+    {
+      "route": "/api/workbench/teaching-planning/status",
+      "intent": "readonly preflight readiness + backend route heartbeat"
+    },
+    {
+      "route": "/api/workbench/teaching-planning/renderer-payload/<session_id>",
+      "intent": "readonly render packet payload preview"
+    },
+    {
+      "route": "/api/workbench/teaching-planning/conflicts/<session_id>",
+      "intent": "readonly conflict hints for planner"
+    },
+    {
+      "route": "/api/workbench/teaching-planning/session/dry-run",
+      "intent": "readonly dry-run execution mirror (future)"
+    },
+    {
+      "route": "/api/workbench/teaching-planning/review-event/dry-run",
+      "intent": "readonly teacher-review event envelope (future)"
+    }
+  ],
+  "candidate_flow": {
+    "status_fetch_first": true,
+    "renderer_payload_once_ready": true,
+    "conflict_panel_refresh": true,
+    "action_items": {
+      "all": "inert_desc",
+      "exec_integration": false,
+      "auto_refresh": false
+    }
+  },
+  "readonly_only": true,
+  "apply_performed": false,
+  "candidate_runtime_connected": false,
+  "rollback": {
+    "on_error": [
+      "retain existing workbench runtime",
+      "do not inject adapter",
+      "do not register endpoint",
+      "remove generated binding candidates only"
+    ],
+    "rollback_required": true,
+    "restore_behavior": "no UI path changed until runtime pass accepted"
+  },
+  "boundaries": {
+    "provider_called": false,
+    "feishu_read": false,
+    "student_data_read": false,
+    "env_secret_read": false,
+    "memory_store_written": false,
+    "database_written": false,
+    "registry_store_written": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "stage": "0997M_TEACHING_PLANNING_RUNTIME_REACHABILITY_AND_FRONTEND_BINDING_GATE",
+  "stage_code": "0997M",
+  "package_slug": "teaching_planning_runtime_reachability_and_frontend_binding_gate_0997M",
+  "final_status": "HOLD_RUNTIME_REACHABILITY_NEEDS_FLASK_ENV",
+  "zip_path": "docs/audit_packages/teaching_planning_runtime_reachability_and_frontend_binding_gate_0997M.zip",
+  "zip_entry_count": 19,
+  "zip_entries": [
+    "docs/foundation/teaching_planning_runtime_reachability_and_frontend_binding_gate_0997M.md",
+    "docs/foundation/teaching_planning_runtime_reachability_and_frontend_binding_gate_0997M.json",
+    "outputs/teaching_planning_frontend_0997M/runtime_reachability_gate_result_0997M.json",
+    "docs/audit/teaching_planning_runtime_reachability_and_frontend_binding_gate_0997M_report.md",
+    "docs/audit/teaching_planning_runtime_reachability_and_frontend_binding_gate_0997M_result.json",
+    "docs/audit/teaching_planning_runtime_reachability_and_frontend_binding_gate_0997M_checklist.json",
+    "scripts/validate_teaching_planning_runtime_reachability_and_frontend_binding_gate_0997M.py",
+    "docs/foundation/teaching_planning_frontend_readonly_route_binding_smoke_and_seal_0997L.json",
+    "docs/audit/teaching_planning_frontend_readonly_route_binding_smoke_and_seal_0997L_result.json",
+    "docs/audit/teaching_planning_frontend_readonly_route_binding_apply_0997K_result.json",
+    "docs/audit/teaching_planning_backend_readonly_route_apply_smoke_seal_0997GHI_result.json",
+    "backend/xiaobei_ai/teaching_planning_readonly_routes_0997H.py",
+    "scripts/smoke_teaching_planning_backend_readonly_route_0997I.py",
+    "outputs/teaching_planning_backend_0997D/readonly_backend_states_0997D.json",
+    "outputs/teaching_planning_backend_0997D/renderer_payload_previews_0997D.json",
+    "docs/audit_packages/teaching_planning_frontend_readonly_route_binding_smoke_and_seal_0997L_manifest.json",
+    "docs/audit_packages/teaching_planning_frontend_readonly_route_binding_smoke_and_seal_0997L.zip",
+    "docs/audit_packages/teaching_planning_frontend_readonly_route_binding_apply_0997K_manifest.json",
+    "docs/audit_packages/teaching_planning_runtime_reachability_and_frontend_binding_gate_0997M_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "next_stage": "0997N_TEACHING_PLANNING_FRONTEND_ROUTE_ADAPTER_READONLY_APPLY_CONTRACT",
+  "next_stage_requires_explicit_decision": true
+}

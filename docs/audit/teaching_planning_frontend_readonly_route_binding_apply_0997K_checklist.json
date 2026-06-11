@@ -1,0 +1,20 @@
+{
+  "stage_id": "0997K_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_APPLY",
+  "final_status": "READONLY_ROUTE_BINDING_APPLY_PRE_FLIGHT_PASS",
+  "checks": {
+    "source_gate_sealed_with_runtime_caveat": true,
+    "source_backend_routes_count_is_7": true,
+    "frontend_readonly_candidate_plan_generated": true,
+    "frontend_preflight_readiness_generated": true,
+    "frontend_route_binding_not_performed": true,
+    "frontent_runtime_not_connected": true,
+    "index_html_not_modified": true,
+    "frontend_not_modified": true,
+    "backend_not_modified": true,
+    "provider_and_data_actions_forbidden": true,
+    "memory_db_provider_retrieval_disabled": true,
+    "active_content_not_written": true,
+    "apply_allowed_next_false": true,
+    "apply_allowed_next_requires_user_confirmation": true
+  }
+}

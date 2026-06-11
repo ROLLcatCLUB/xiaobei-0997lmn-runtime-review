@@ -1,0 +1,47 @@
+{
+  "stage_id": "0997K_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_APPLY",
+  "final_status": "READONLY_ROUTE_BINDING_PRE_FLIGHT_PASS",
+  "runtime_sync_required": true,
+  "backend_route_readiness": {
+    "route_count_expected": 7,
+    "route_count_observed": 7,
+    "source": "0997H_TEACHING_PLANNING_BACKEND_READONLY_ROUTE_APPLY",
+    "flask_smoke_caveat": "NOT_RUN_ENV_FLASK_MISSING",
+    "runtime_smoke_available": false
+  },
+  "pre_apply_guard": {
+    "apply_blocked_by_runtime_caveat": true,
+    "requirement": "confirm server-side flask runtime reachable before true runtime bind",
+    "candidate_apply_performed": false,
+    "manual_confirmation_needed": true
+  },
+  "front_readiness": {
+    "index_html_touched": false,
+    "runtime_adapter_added": false,
+    "route_binding_real": false,
+    "endpoint_bridge_created": false,
+    "candidate_assets_exists_for_review_only": true
+  },
+  "apply_decision": {
+    "apply_next": false,
+    "apply_next_reason": "needs runtime sync confirmation",
+    "next_gate": "0997L_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_SMOKE_AND_SEAL",
+    "next_stage_requires_explicit_decision": true
+  },
+  "risk_scan": {
+    "provider_called": false,
+    "feishu_read": false,
+    "student_data_read": false,
+    "env_secret_read": false,
+    "memory_store_written": false,
+    "database_written": false
+  },
+  "candidate_rollback": {
+    "on_failure": [
+      "clear any generated binding candidates",
+      "keep previous workbench runtime path unchanged",
+      "remove temp route adapter references"
+    ],
+    "rollback_mode": "readonly_revert_only"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "stage": "0997N_TEACHING_PLANNING_FRONTEND_ROUTE_ADAPTER_READONLY_RUNTIME_APPLY",
+  "stage_code": "0997N",
+  "package_slug": "teaching_planning_frontend_route_adapter_readonly_runtime_apply_0997N",
+  "final_status": "RUNTIME_READONLY_APPLY_PASS",
+  "zip_path": "docs/audit_packages/teaching_planning_frontend_route_adapter_readonly_runtime_apply_0997N.zip",
+  "zip_entry_count": 17,
+  "zip_entries": [
+    "docs/foundation/teaching_planning_frontend_route_adapter_readonly_runtime_apply_0997N.md",
+    "docs/foundation/teaching_planning_frontend_route_adapter_readonly_runtime_apply_0997N.json",
+    "outputs/teaching_planning_frontend_0997N/runtime_http_smoke_0997N.json",
+    "docs/audit/teaching_planning_frontend_route_adapter_readonly_runtime_apply_0997N_report.md",
+    "docs/audit/teaching_planning_frontend_route_adapter_readonly_runtime_apply_0997N_result.json",
+    "docs/audit/teaching_planning_frontend_route_adapter_readonly_runtime_apply_0997N_checklist.json",
+    "scripts/validate_teaching_planning_frontend_route_adapter_readonly_runtime_apply_0997N.py",
+    "scripts/smoke_teaching_planning_frontend_route_adapter_0997N.js",
+    "scripts/run_teaching_planning_runtime_0997N.py",
+    "frontend/workbench/workbench_teaching_planning_route_adapter_0997N.js",
+    "frontend/workbench/index.html",
+    "backend/xiaobei_ai/routes.py",
+    "backend/xiaobei_ai/teaching_planning_readonly_routes_0997H.py",
+    "scripts/smoke_teaching_planning_backend_readonly_route_0997I.py",
+    "docs/audit/teaching_planning_frontend_readonly_route_binding_smoke_and_seal_0997L_result.json",
+    "docs/audit/teaching_planning_runtime_reachability_and_frontend_binding_gate_0997M_result.json",
+    "docs/audit_packages/teaching_planning_frontend_route_adapter_readonly_runtime_apply_0997N_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "next_stage": "0997O_TEACHING_PLANNING_BROWSER_RUNTIME_VISUAL_SMOKE_AND_SEAL",
+  "next_stage_requires_explicit_decision": false
+}

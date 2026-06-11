@@ -1,0 +1,49 @@
+{
+  "stage_id": "0997N_TEACHING_PLANNING_FRONTEND_ROUTE_ADAPTER_READONLY_RUNTIME_APPLY",
+  "stage_code": "0997N",
+  "mode": "frontend_route_adapter_readonly_runtime_apply",
+  "previous_stage": "0997M_TEACHING_PLANNING_RUNTIME_REACHABILITY_AND_FRONTEND_BINDING_GATE",
+  "previous_status": "HOLD_RUNTIME_REACHABILITY_NEEDS_FLASK_ENV",
+  "runtime_hold_resolved_by_local_flask_install": true,
+  "final_status": "RUNTIME_READONLY_APPLY_PASS",
+  "runtime_surface": {
+    "frontend_url": "http://127.0.0.1:5177/frontend/workbench/index.html",
+    "backend_status_url": "http://127.0.0.1:8082/api/workbench/teaching-planning/status",
+    "default_session_id": "tp_session_syn_001"
+  },
+  "applied_files": [
+    "frontend/workbench/workbench_teaching_planning_route_adapter_0997N.js",
+    "scripts/run_teaching_planning_runtime_0997N.py",
+    "frontend/workbench/index.html",
+    "backend/xiaobei_ai/routes.py"
+  ],
+  "runtime_smoke": {
+    "flask_test_client_smoke": "PASS",
+    "real_http_status_endpoint": "PASS",
+    "real_http_session_endpoint": "PASS",
+    "real_http_renderer_payload_endpoint": "PASS",
+    "static_index_includes_adapter": "PASS",
+    "static_adapter_served": "PASS",
+    "cors_5177": "PASS"
+  },
+  "boundary_flags": {
+    "readonly": true,
+    "database_written": false,
+    "provider_called": false,
+    "provider_context_injection": false,
+    "memory_store_written": false,
+    "retrieval_enabled": false,
+    "registry_store_written": false,
+    "feishu_called": false,
+    "feishu_token_read": false,
+    "student_data_read": false,
+    "env_secret_read": false,
+    "active_teaching_plan_written": false,
+    "active_timetable_written": false,
+    "formal_export_created": false,
+    "deploy_performed": false
+  },
+  "recommended_next_stage": "0997O_TEACHING_PLANNING_BROWSER_RUNTIME_VISUAL_SMOKE_AND_SEAL",
+  "next_stage": "0997O_TEACHING_PLANNING_BROWSER_RUNTIME_VISUAL_SMOKE_AND_SEAL",
+  "next_stage_requires_explicit_decision": false
+}

@@ -1,0 +1,23 @@
+{
+  "stage": "0997K_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_APPLY",
+  "stage_code": "0997K",
+  "package_slug": "teaching_planning_frontend_readonly_route_binding_apply_0997K",
+  "final_status": "READONLY_ROUTE_BINDING_APPLY_PRE_FLIGHT_PASS",
+  "zip_path": "docs/audit_packages/teaching_planning_frontend_readonly_route_binding_apply_0997K.zip",
+  "zip_entry_count": 9,
+  "zip_entries": [
+    "docs/foundation/teaching_planning_frontend_readonly_route_binding_apply_0997K.md",
+    "docs/foundation/teaching_planning_frontend_readonly_route_binding_apply_0997K.json",
+    "outputs/teaching_planning_frontend_0997K/readonly_frontend_route_binding_candidate_plan_0997K.json",
+    "outputs/teaching_planning_frontend_0997K/frontend_route_binding_preflight_readiness_0997K.json",
+    "docs/audit/teaching_planning_frontend_readonly_route_binding_apply_0997K_report.md",
+    "docs/audit/teaching_planning_frontend_readonly_route_binding_apply_0997K_result.json",
+    "docs/audit/teaching_planning_frontend_readonly_route_binding_apply_0997K_checklist.json",
+    "scripts/validate_teaching_planning_frontend_readonly_route_binding_apply_0997K.py",
+    "docs/audit_packages/teaching_planning_frontend_readonly_route_binding_apply_0997K_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "next_stage": "0997L_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_SMOKE_AND_SEAL",
+  "next_stage_requires_explicit_decision": true
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "state_id": "tp_state_syn_0997C_complete",
+    "session_id": "tp_session_syn_001",
+    "source_fixture_id": "legal_complete_planning_state_fixture_0997C",
+    "renderer_payload_preview": {
+      "readonly": true,
+      "provider_injection_allowed": false,
+      "payloads": [
+        {
+          "surface_key": "semester_week_calendar",
+          "render_mode": "week_agenda",
+          "readonly": true
+        },
+        {
+          "surface_key": "unit_lesson_allocation",
+          "render_mode": "mindmap",
+          "readonly": true
+        }
+      ]
+    },
+    "readonly": true,
+    "provider_injection_allowed": false,
+    "memory_store_write_allowed": false
+  },
+  {
+    "state_id": "tp_state_syn_0997C_missing",
+    "session_id": "tp_session_syn_002",
+    "source_fixture_id": "legal_missing_input_planning_state_fixture_0997C",
+    "renderer_payload_preview": {
+      "readonly": true,
+      "provider_injection_allowed": false,
+      "payloads": [
+        {
+          "surface_key": "teaching_work_plan",
+          "render_mode": "missing_input_prompt",
+          "readonly": true
+        }
+      ]
+    },
+    "readonly": true,
+    "provider_injection_allowed": false,
+    "memory_store_write_allowed": false
+  },
+  {
+    "state_id": "tp_state_syn_0997C_agent_review",
+    "session_id": "tp_session_syn_003",
+    "source_fixture_id": "legal_agent_review_action_fixture_0997C",
+    "renderer_payload_preview": {
+      "readonly": true,
+      "provider_injection_allowed": false,
+      "payloads": [
+        {
+          "surface_key": "semester_week_calendar",
+          "render_mode": "week_agenda",
+          "readonly": true
+        },
+        {
+          "surface_key": "unit_lesson_allocation",
+          "render_mode": "mindmap_revision_preview",
+          "readonly": true
+        }
+      ]
+    },
+    "readonly": true,
+    "provider_injection_allowed": false,
+    "memory_store_write_allowed": false
+  }
+]

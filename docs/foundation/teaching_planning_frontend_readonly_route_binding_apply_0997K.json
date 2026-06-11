@@ -1,0 +1,93 @@
+{
+  "stage_id": "0997K_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_APPLY",
+  "stage_code": "0997K",
+  "line_id": "0997_FRONTEND_BINDING_LINE",
+  "mode": "frontend_readonly_route_binding_apply_preflight",
+  "previous_stage": "0997J_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_GATE",
+  "previous_status": "HOLD_FRONTEND_ROUTE_BINDING_NEEDS_RUNTIME_SYNC",
+  "scope": "readonly_frontend_route_binding_preflight_only",
+  "final_status": "READONLY_ROUTE_BINDING_APPLY_PRE_FLIGHT_PASS",
+  "source_chain": {
+    "source_gate": "0997J_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_GATE",
+    "source_smoke_and_seal": "0997GHI_TEACHING_PLANNING_BACKEND_READONLY_ROUTE_APPLY_SMOKE_SEAL",
+    "runtime_backend_routes": 7,
+    "source_endpoints": [
+      "/api/workbench/teaching-planning/status",
+      "/api/workbench/teaching-planning/session/<session_id>",
+      "/api/workbench/teaching-planning/session/dry-run",
+      "/api/workbench/teaching-planning/agent-action/dry-run",
+      "/api/workbench/teaching-planning/review-event/dry-run",
+      "/api/workbench/teaching-planning/renderer-payload/<session_id>",
+      "/api/workbench/teaching-planning/conflicts/<session_id>"
+    ]
+  },
+  "readonly_frontend_route_binding_candidate_plan_created": true,
+  "frontend_route_binding_preflight_readiness_generated": true,
+  "candidate_plan_path": "outputs/teaching_planning_frontend_0997K/readonly_frontend_route_binding_candidate_plan_0997K.json",
+  "preflight_readiness_path": "outputs/teaching_planning_frontend_0997K/frontend_route_binding_preflight_readiness_0997K.json",
+  "binding_plan": {
+    "apply_performed": false,
+    "readonly_bind_mode": "candidate_plan_only",
+    "target_surface": "frontend/workbench/index.html",
+    "runtime_frontend_assets_candidates": [
+      "frontend/workbench/workbench_teaching_planning_route_adapter_0997K.js",
+      "frontend/workbench/workbench_teaching_planning_route_adapter_0997K.css",
+      "frontend/workbench/workbench_teaching_planning_route_adapter_0997K.init.js"
+    ],
+    "call_sequence": [
+      "GET /api/workbench/teaching-planning/status",
+      "GET /api/workbench/teaching-planning/renderer-payload/<session_id>",
+      "GET /api/workbench/teaching-planning/conflicts/<session_id>"
+    ],
+    "fallback_strategy": {
+      "on_fetch_error": "preserve existing workbench behavior; show readonly offline banner",
+      "rollback_plan": "remove binding loader only; keep page unchanged"
+    },
+    "candidate_actions_policy": {
+      "all_candidate_actions_inert": true,
+      "auto_execute_disabled": true,
+      "requires_teacher_confirmation": true
+    }
+  },
+  "boundary_flags": {
+    "apply_performed": false,
+    "runtime_binding_performed": false,
+    "frontend_route_binding_performed": false,
+    "readonly_frontend_route_binding_apply_performed": false,
+    "frontend_modified": false,
+    "frontend_runtime_modified": false,
+    "frontend_workbench_index_modified": false,
+    "index_html_modified": false,
+    "backend_modified": false,
+    "backend_route_file_modified": false,
+    "backend_runtime_modified": false,
+    "route_created": false,
+    "endpoint_created": false,
+    "import_created": false,
+    "runtime_connected": false,
+    "server_synced": false,
+    "runtime_adapter_created": false,
+    "runtime_adapter_registered": false,
+    "provider_called": false,
+    "provider_context_injection": false,
+    "feishu_api_called": false,
+    "feishu_token_read": false,
+    "student_data_read": false,
+    "env_secret_read": false,
+    "database_written": false,
+    "registry_store_written": false,
+    "memory_store_written": false,
+    "retrieval_enabled": false,
+    "active_teaching_plan_written": false,
+    "active_timetable_written": false,
+    "formal_export_created": false,
+    "deploy_performed": false,
+    "candidate_actions_made_executable": false,
+    "inactive_actions_made_executable": false
+  },
+  "next_stage": "0997L_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_SMOKE_AND_SEAL",
+  "recommended_next_stage": "0997L_TEACHING_PLANNING_FRONTEND_READONLY_ROUTE_BINDING_SMOKE_AND_SEAL",
+  "next_stage_requires_explicit_decision": true,
+  "apply_allowed_next": false,
+  "apply_allowed_next_requires_user_confirmation": true
+}

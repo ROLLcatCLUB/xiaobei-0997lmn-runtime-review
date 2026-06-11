@@ -1,0 +1,354 @@
+[
+  {
+    "schema_version": "0997B.v0",
+    "state_id": "tp_state_syn_0997C_complete",
+    "session": {
+      "session_id": "tp_session_syn_001",
+      "teacher_id": "teacher_synthetic_001",
+      "business_domain": "teaching_planning",
+      "current_step": "generate_candidates",
+      "status": "candidate_ready",
+      "created_at": "2026-06-10T00:00:00+08:00",
+      "updated_at": "2026-06-10T00:00:00+08:00"
+    },
+    "teacher_input": {
+      "snapshot_id": "tp_input_syn_complete_001",
+      "fields": {
+        "semester": "2025-2026学年第一学期",
+        "grade_subject": "四年级美术",
+        "weekly_lessons": 1,
+        "activity_weeks": [
+          "创艺节",
+          "期末展示周"
+        ],
+        "textbook_catalog_optional": true
+      },
+      "missing_fields": [],
+      "source_refs": [
+        "src_teacher_conversation_syn_001",
+        "src_uploaded_doc_ref_syn_001"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "src_teacher_conversation_syn_001",
+        "source_type": "teacher_conversation",
+        "source_summary": "Synthetic teacher provided semester, subject, weekly lesson count, and activity weeks.",
+        "sensitive_data_allowed": false
+      },
+      {
+        "source_id": "src_uploaded_doc_ref_syn_001",
+        "source_type": "uploaded_document_ref",
+        "source_summary": "Anonymous teaching work plan sample reference.",
+        "sensitive_data_allowed": false
+      }
+    ],
+    "semantic_fields": [
+      {
+        "field_id": "sf_semester_start_syn_001",
+        "surface_key": "semester_week_calendar",
+        "field_name": "semester_start",
+        "field_value": "2025-09-01",
+        "confidence": 0.86,
+        "source_refs": [
+          "src_teacher_conversation_syn_001"
+        ]
+      },
+      {
+        "field_id": "sf_event_title_syn_001",
+        "surface_key": "course_schedule_calendar",
+        "field_name": "event_title",
+        "field_value": "第一单元第1课 图画中的生活",
+        "confidence": 0.81,
+        "source_refs": [
+          "src_uploaded_doc_ref_syn_001"
+        ]
+      },
+      {
+        "field_id": "sf_unit_lesson_syn_001",
+        "surface_key": "unit_lesson_allocation",
+        "field_name": "lesson_title",
+        "field_value": "第1课时 观察与表达",
+        "confidence": 0.83,
+        "source_refs": [
+          "src_uploaded_doc_ref_syn_001"
+        ]
+      }
+    ],
+    "candidate_outputs": [
+      {
+        "candidate_id": "cand_semester_week_calendar_syn_001",
+        "surface_key": "semester_week_calendar",
+        "candidate_status": "draft_candidate",
+        "teacher_review_status": "pending_teacher_reply",
+        "official_write_allowed": false
+      },
+      {
+        "candidate_id": "cand_unit_lesson_allocation_syn_001",
+        "surface_key": "unit_lesson_allocation",
+        "candidate_status": "draft_candidate",
+        "teacher_review_status": "pending_teacher_reply",
+        "official_write_allowed": false
+      }
+    ],
+    "conflicts": [
+      {
+        "conflict_id": "conf_info_textbook_optional_syn_001",
+        "conflict_type": "evidence_gap",
+        "severity": "info",
+        "summary": "Textbook catalog is optional and can be linked later.",
+        "blocking": false
+      }
+    ],
+    "agent_actions": [],
+    "review_events": [],
+    "renderer_payload_preview": {
+      "readonly": true,
+      "provider_injection_allowed": false,
+      "payloads": [
+        {
+          "surface_key": "semester_week_calendar",
+          "render_mode": "week_agenda",
+          "readonly": true
+        },
+        {
+          "surface_key": "unit_lesson_allocation",
+          "render_mode": "mindmap",
+          "readonly": true
+        }
+      ]
+    },
+    "builder_stage": "0997D_TEACHING_PLANNING_BACKEND_DRY_RUN_STATE_BUILDER_READONLY_APPLY",
+    "source_fixture_id": "legal_complete_planning_state_fixture_0997C",
+    "readonly_apply_flags": {
+      "backend_route_created": false,
+      "backend_runtime_modified": false,
+      "database_written": false,
+      "provider_called": false,
+      "feishu_called": false,
+      "memory_store_written": false,
+      "frontend_modified": false,
+      "official_export_created": false
+    }
+  },
+  {
+    "schema_version": "0997B.v0",
+    "state_id": "tp_state_syn_0997C_missing",
+    "session": {
+      "session_id": "tp_session_syn_002",
+      "teacher_id": "teacher_synthetic_002",
+      "business_domain": "teaching_planning",
+      "current_step": "collect_basic_info",
+      "status": "collecting_input"
+    },
+    "teacher_input": {
+      "snapshot_id": "tp_input_syn_missing_001",
+      "fields": {
+        "semester": "2025-2026学年第一学期",
+        "grade_subject": "四年级美术"
+      },
+      "missing_fields": [
+        "weekly_lessons",
+        "activity_weeks"
+      ],
+      "source_refs": [
+        "src_teacher_conversation_syn_002"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "src_teacher_conversation_syn_002",
+        "source_type": "teacher_conversation",
+        "source_summary": "Synthetic teacher gave semester and subject only.",
+        "sensitive_data_allowed": false
+      }
+    ],
+    "semantic_fields": [
+      {
+        "field_id": "sf_grade_subject_syn_002",
+        "surface_key": "teacher_timetable",
+        "field_name": "subject",
+        "field_value": "四年级美术",
+        "confidence": 0.78,
+        "source_refs": [
+          "src_teacher_conversation_syn_002"
+        ]
+      }
+    ],
+    "candidate_outputs": [
+      {
+        "candidate_id": "cand_missing_input_syn_002",
+        "surface_key": "teaching_work_plan",
+        "candidate_status": "needs_input",
+        "teacher_review_status": "pending_teacher_reply",
+        "official_write_allowed": false
+      }
+    ],
+    "conflicts": [
+      {
+        "conflict_id": "conf_missing_weekly_lessons_syn_002",
+        "conflict_type": "missing_required_field",
+        "severity": "blocker",
+        "summary": "Weekly lesson count is required before schedule candidates can be generated.",
+        "blocking": true
+      }
+    ],
+    "agent_actions": [
+      {
+        "command_id": "cmd_request_missing_input_syn_002",
+        "action_id": "request_missing_input",
+        "source_utterance_summary": "Teacher asks what information is still needed.",
+        "target_candidate_ids": [
+          "cand_missing_input_syn_002"
+        ],
+        "requires_teacher_confirmation": false,
+        "write_allowed": false
+      }
+    ],
+    "review_events": [],
+    "renderer_payload_preview": {
+      "readonly": true,
+      "provider_injection_allowed": false,
+      "payloads": [
+        {
+          "surface_key": "teaching_work_plan",
+          "render_mode": "missing_input_prompt",
+          "readonly": true
+        }
+      ]
+    },
+    "builder_stage": "0997D_TEACHING_PLANNING_BACKEND_DRY_RUN_STATE_BUILDER_READONLY_APPLY",
+    "source_fixture_id": "legal_missing_input_planning_state_fixture_0997C",
+    "readonly_apply_flags": {
+      "backend_route_created": false,
+      "backend_runtime_modified": false,
+      "database_written": false,
+      "provider_called": false,
+      "feishu_called": false,
+      "memory_store_written": false,
+      "frontend_modified": false,
+      "official_export_created": false
+    }
+  },
+  {
+    "schema_version": "0997B.v0",
+    "state_id": "tp_state_syn_0997C_agent_review",
+    "session": {
+      "session_id": "tp_session_syn_003",
+      "teacher_id": "teacher_synthetic_003",
+      "business_domain": "teaching_planning",
+      "current_step": "review_candidates",
+      "status": "reviewing"
+    },
+    "teacher_input": {
+      "snapshot_id": "tp_input_syn_review_001",
+      "fields": {
+        "semester": "2025-2026学年第一学期",
+        "grade_subject": "四年级美术",
+        "weekly_lessons": 1,
+        "activity_weeks": [
+          "创艺节"
+        ]
+      },
+      "missing_fields": [],
+      "source_refs": [
+        "src_teacher_conversation_syn_003"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "src_teacher_conversation_syn_003",
+        "source_type": "teacher_conversation",
+        "source_summary": "Synthetic teacher says the week calendar is acceptable but unit lessons need revision.",
+        "sensitive_data_allowed": false
+      }
+    ],
+    "semantic_fields": [
+      {
+        "field_id": "sf_review_unit_syn_003",
+        "surface_key": "unit_lesson_allocation",
+        "field_name": "lesson_content",
+        "field_value": "Need more explicit per-lesson content.",
+        "confidence": 0.74,
+        "source_refs": [
+          "src_teacher_conversation_syn_003"
+        ]
+      }
+    ],
+    "candidate_outputs": [
+      {
+        "candidate_id": "cand_semester_week_calendar_syn_003",
+        "surface_key": "semester_week_calendar",
+        "candidate_status": "accepted_candidate_preview",
+        "teacher_review_status": "accepted_by_teacher",
+        "official_write_allowed": false
+      },
+      {
+        "candidate_id": "cand_unit_lesson_allocation_syn_003",
+        "surface_key": "unit_lesson_allocation",
+        "candidate_status": "revised_candidate",
+        "teacher_review_status": "pending_teacher_reply",
+        "official_write_allowed": false
+      }
+    ],
+    "conflicts": [],
+    "agent_actions": [
+      {
+        "command_id": "cmd_accept_week_calendar_syn_003",
+        "action_id": "accept_candidate",
+        "source_utterance_summary": "Teacher says the week calendar can be used.",
+        "target_candidate_ids": [
+          "cand_semester_week_calendar_syn_003"
+        ],
+        "requires_teacher_confirmation": true,
+        "write_allowed": false
+      },
+      {
+        "command_id": "cmd_revise_unit_lessons_syn_003",
+        "action_id": "revise_candidate",
+        "source_utterance_summary": "Teacher asks to expand each unit into per-lesson content.",
+        "target_candidate_ids": [
+          "cand_unit_lesson_allocation_syn_003"
+        ],
+        "requires_teacher_confirmation": true,
+        "write_allowed": false
+      }
+    ],
+    "review_events": [
+      {
+        "event_id": "review_accept_week_calendar_syn_003",
+        "candidate_id": "cand_semester_week_calendar_syn_003",
+        "review_action": "accept_candidate",
+        "append_only": true
+      }
+    ],
+    "renderer_payload_preview": {
+      "readonly": true,
+      "provider_injection_allowed": false,
+      "payloads": [
+        {
+          "surface_key": "semester_week_calendar",
+          "render_mode": "week_agenda",
+          "readonly": true
+        },
+        {
+          "surface_key": "unit_lesson_allocation",
+          "render_mode": "mindmap_revision_preview",
+          "readonly": true
+        }
+      ]
+    },
+    "builder_stage": "0997D_TEACHING_PLANNING_BACKEND_DRY_RUN_STATE_BUILDER_READONLY_APPLY",
+    "source_fixture_id": "legal_agent_review_action_fixture_0997C",
+    "readonly_apply_flags": {
+      "backend_route_created": false,
+      "backend_runtime_modified": false,
+      "database_written": false,
+      "provider_called": false,
+      "feishu_called": false,
+      "memory_store_written": false,
+      "frontend_modified": false,
+      "official_export_created": false
+    }
+  }
+]
